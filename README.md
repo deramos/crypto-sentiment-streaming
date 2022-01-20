@@ -1,1 +1,1 @@
-# Stock Sentiment Streaming
+# Crypto Sentiment Streaming
