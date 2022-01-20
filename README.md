@@ -1,1 +1,1 @@
-# stock-sentiment-streaming
+# Stock Sentiment Streaming
