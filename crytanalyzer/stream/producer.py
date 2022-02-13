@@ -6,6 +6,10 @@ from kafka import KafkaProducer
 # producer = KafkaProducer(bootstrap_servers='localhost:9092')
 # topic = "crypto"
 
+with open("../cashtags.txt", 'r') as cf:
+    coins = cf.readlines()
+    print(coins)
+
 
 class TweetStreamer(tweepy.Stream):
     def on_data(self, raw_data):
