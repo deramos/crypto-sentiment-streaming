@@ -1,0 +1,1 @@
+CASSANDRA_KEYSPACE = 'cryptodata'

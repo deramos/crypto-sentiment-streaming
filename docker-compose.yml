@@ -24,10 +24,21 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
 
+  cassandra:
+    image: cassandra:4.0.2
+    container_name: cassandra
+    ports:
+      - "9042:9042"
+    volumes:
+      - ~/db/cassandra:/var/lib/cassandra
+    environment:
+      - CASSANDRA_CLUSTER_NAME=crytosandra
+
   app:
     build: "./app"
     container_name: api
     depends_on:
       - kafka
+      - cassandra
     ports:
       - "80:80"

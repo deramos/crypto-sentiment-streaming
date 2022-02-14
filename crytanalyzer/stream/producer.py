@@ -1,41 +1,33 @@
 import os
-import tweepy
+import logging
+from pathlib import Path
 from twython import TwythonStreamer
 from kafka import KafkaProducer
 
-# producer = KafkaProducer(bootstrap_servers='localhost:9092')
-# topic = "crypto"
+producer = KafkaProducer(bootstrap_servers='localhost:9092')
+topic = "crypto"
 
-with open("../cashtags.txt", 'r') as cf:
-    coins = cf.readlines()
-    print(coins)
+logger = logging.getLogger("Kafka Producer")
 
-
-class TweetStreamer(tweepy.Stream):
-    def on_data(self, raw_data):
-        print(raw_data)
+with open(Path.joinpath(Path(__file__).parent.parent, 'cashtags.txt'), 'r') as cf:
+    coins = cf.read().splitlines()
 
 
 class MyStreamer(TwythonStreamer):
     def on_success(self, data):
-        print(data)
+        timestamp = data.get('created_at')
+        text = data.get('text')
+
+        producer.send(topic, value=f"{timestamp}\t{text}")
 
     def on_error(self, status_code, data, headers=None):
-        print(status_code)
+        logger.exception(status_code)
 
 
 def start_stream():
-    tweet_stream = TweetStreamer(os.environ['TWITTER_API_KEY'],
-                                 os.environ['TWITTER_API_KEY_SECRET'],
-                                 os.environ['TWITTER_ACCESS_TOKEN'],
-                                 os.environ['TWITTER_ACCESS_TOKEN_SECRET'])
-
     stream = MyStreamer(os.environ['TWITTER_API_KEY'],
                         os.environ['TWITTER_API_KEY_SECRET'],
                         os.environ['TWITTER_ACCESS_TOKEN'],
                         os.environ['TWITTER_ACCESS_TOKEN_SECRET'])
 
-    stream.statuses.filter(track='$btc')
-
-    # print(tweet_stream.sample())
-
+    stream.statuses.filter(track=coins)

@@ -1,2 +1,2 @@
 $BTC
-$CRO
+$ETH
