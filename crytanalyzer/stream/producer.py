@@ -15,10 +15,11 @@ with open(Path.joinpath(Path(__file__).parent.parent, 'cashtags.txt'), 'r') as c
 
 class MyStreamer(TwythonStreamer):
     def on_success(self, data):
+        id_ = data.get('id')
         timestamp = data.get('created_at')
         text = data.get('text')
 
-        producer.send(topic, value=f"{timestamp}\t{text}")
+        producer.send(topic, value=f"{id_}\t{timestamp}\t{text}")
 
     def on_error(self, status_code, data, headers=None):
         logger.exception(status_code)

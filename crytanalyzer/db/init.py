@@ -15,7 +15,7 @@ def init():
         logger.warning("Error connecting to {} keyspace {}. Creating Keyspace... ".format(CASSANDRA_KEYSPACE, e))
         session = cluster.connect()
         session.execute(f"CREATE KEYSPACE IF NOT EXISTS {CASSANDRA_KEYSPACE} WITH replication = "
-                        "{'class': 'SimpleStrategy', 'replication_factor': '1'};")
+                        "{'class': 'SimpleStrategy', 'replication_factor': '3'};")
 
         session = cluster.connect(CASSANDRA_KEYSPACE)
 
