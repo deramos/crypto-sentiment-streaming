@@ -75,72 +75,72 @@ services:
       retries: 5
     restart: always
 
-    redis:
-      image: redis:latest
-      ports:
-        - 6379:6379
-      healthcheck:
-        test: [ "CMD", "redis-cli", "ping" ]
-        interval: 5s
-        timeout: 30s
-        retries: 50
-      restart: always
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 5s
+      timeout: 30s
+      retries: 50
+    restart: always
 
-    airflow-webserver:
-      <<: *airflow-common
-      command: webserver
-      ports:
-        - 8080:8080
-      healthcheck:
-        test: [ "CMD", "curl", "--fail", "http://localhost:8080/health" ]
-        interval: 10s
-        timeout: 10s
-        retries: 5
-      restart: always
+  airflow-webserver:
+    <<: *airflow-common
+    command: webserver
+    ports:
+      - 8080:8080
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "http://localhost:8080/health" ]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+    restart: always
 
-    airflow-scheduler:
-      <<: *airflow-common
-      command: scheduler
-      healthcheck:
-        test: [ "CMD-SHELL", 'airflow jobs check --job-type SchedulerJob --hostname "$${HOSTNAME}"' ]
-        interval: 10s
-        timeout: 10s
-        retries: 5
-      restart: always
+  airflow-scheduler:
+    <<: *airflow-common
+    command: scheduler
+    healthcheck:
+      test: [ "CMD-SHELL", 'airflow jobs check --job-type SchedulerJob --hostname "$${HOSTNAME}"' ]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+    restart: always
 
-    airflow-worker:
-      <<: *airflow-common
-      command: celery worker
-      healthcheck:
-        test:
-          - "CMD-SHELL"
-          - 'celery --app airflow.executors.celery_executor.app inspect ping -d "celery@$${HOSTNAME}"'
-        interval: 10s
-        timeout: 10s
-        retries: 5
-      restart: always
+  airflow-worker:
+    <<: *airflow-common
+    command: celery worker
+    healthcheck:
+      test:
+        - "CMD-SHELL"
+        - 'celery --app airflow.executors.celery_executor.app inspect ping -d "celery@$${HOSTNAME}"'
+      interval: 10s
+      timeout: 10s
+      retries: 5
+    restart: always
 
-    airflow-init:
-      <<: *airflow-common
-      command: version
-      environment:
-        <<: *airflow-common-env
-        _AIRFLOW_DB_UPGRADE: 'true'
-        _AIRFLOW_WWW_USER_CREATE: 'true'
-        _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
-        _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
+  airflow-init:
+    <<: *airflow-common
+    command: version
+    environment:
+      <<: *airflow-common-env
+      _AIRFLOW_DB_UPGRADE: 'true'
+      _AIRFLOW_WWW_USER_CREATE: 'true'
+      _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
+      _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
 
-    flower:
-      <<: *airflow-common
-      command: celery flower
-      ports:
-        - 5555:5555
-      healthcheck:
-        test: [ "CMD", "curl", "--fail", "http://localhost:5555/" ]
-        interval: 10s
-        timeout: 10s
-        retries: 5
-      restart: always
+  flower:
+    <<: *airflow-common
+    command: celery flower
+    ports:
+      - 5555:5555
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "http://localhost:5555/" ]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+    restart: always
 
   app:
     build: .
