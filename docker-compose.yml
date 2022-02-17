@@ -15,7 +15,7 @@ x-airflow-common:
     AIRFLOW__API__AUTH_BACKEND: 'airflow.api.auth.backend.basic_auth'
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-apache-airflow-providers-postgres apache-airflow-providers-mongo apache-airflow-providers-amazon}
   volumes:
-    - ./crytanalyzer/airflow/jobs:/opt/airflow/dags
+    - ./crytanalyzer/airflow/dags:/opt/airflow/dags
     - ./crytanalyzer/airflow/logs:/opt/airflow/logs
     - ./crytanalyzer/airflow/plugins:/opt/airflow/plugins
   user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}"
@@ -78,7 +78,7 @@ services:
   redis:
     image: redis:latest
     ports:
-      - 6379:6379
+      - "6379:6379"
     healthcheck:
       test: [ "CMD", "redis-cli", "ping" ]
       interval: 5s
@@ -90,7 +90,7 @@ services:
     <<: *airflow-common
     command: webserver
     ports:
-      - 8080:8080
+      - "8080:8080"
     healthcheck:
       test: [ "CMD", "curl", "--fail", "http://localhost:8080/health" ]
       interval: 10s
@@ -134,7 +134,7 @@ services:
     <<: *airflow-common
     command: celery flower
     ports:
-      - 5555:5555
+      - "5555:5555"
     healthcheck:
       test: [ "CMD", "curl", "--fail", "http://localhost:5555/" ]
       interval: 10s

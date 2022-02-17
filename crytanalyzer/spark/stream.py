@@ -1,7 +1,7 @@
 from pyspark import SparkContext
 
 
-class StreamProcessor:
+class SparkStreamProcessor:
     def __init__(self):
         self.server = "local[*]"
 
