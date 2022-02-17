@@ -35,7 +35,7 @@ services:
       - CASSANDRA_CLUSTER_NAME=crytosandra
 
   app:
-    build: "."
+    build: .
     container_name: api
     depends_on:
       - kafka
