@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2217c4db-910f-490e-aeed-9a89ed5c2b4f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cryto-sentiment-streaming.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/airflow/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/airflow/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/airflow/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/app/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/app/api/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/app/api/view/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/app/api/view/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/cashtags.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/config/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/config/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/db/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/db/init.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/db/sql/init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/init.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/spark/stream.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/stream/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/stream/producer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crytanalyzer/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2S5l6iya5oIl1VakAaNkyIm7DXD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "derabyte",
+    "last_opened_file_path": "/Users/aristotle/Documents/projects/cryto-sentiment-streaming",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2217c4db-910f-490e-aeed-9a89ed5c2b4f" name="Changes" comment="" />
+      <created>1688444149918</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688444149918</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="derabyte" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
