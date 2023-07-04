@@ -127,3 +127,16 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Remove idea files
+.idea
+
+# Remove storage files
+.DS_Store
+
+# Remove cache files
+app/__pycache__/
+ap/*/__pychache__/
+
+# ignore .env files
+app/.env

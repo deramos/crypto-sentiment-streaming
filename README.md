@@ -1,1 +1,1 @@
-# Crypto Sentiment Streaming
+# Coin Price Estimator

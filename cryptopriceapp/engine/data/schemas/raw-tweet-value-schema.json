@@ -1,0 +1,6 @@
+{
+  "namespace": "bitcoin.predictor.app",
+  "name": "bitcoin.tweet.raw",
+  "type": "record",
+  "fields": []
+}
