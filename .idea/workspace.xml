@@ -1,39 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2217c4db-910f-490e-aeed-9a89ed5c2b4f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cryto-sentiment-streaming.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/airflow/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/airflow/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/airflow/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/app/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/app/api/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/app/api/view/base.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/app/api/view/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/cashtags.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/config/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/config/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/db/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/db/init.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/db/sql/init.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/init.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/spark/stream.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/stream/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/stream/producer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crytanalyzer/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="2217c4db-910f-490e-aeed-9a89ed5c2b4f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
