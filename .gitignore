@@ -136,7 +136,7 @@ dmypy.json
 
 # Remove cache files
 app/__pycache__/
-ap/*/__pychache__/
+app/*/__pychache__/
 
 # ignore .env files
 app/.env
