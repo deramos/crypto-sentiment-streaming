@@ -1,3 +1,3 @@
 # Coin Price Estimator
 
-This project is discontinued for now because Twitter removed free tweet streaming 😞
+This project has been discontinued because Twitter removed free tweet streaming 😞
